@@ -1,4 +1,4 @@
-package net.livepharma.backend.entity;
+package net.livepharma.backend.dto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,25 +12,16 @@ import java.time.LocalDate;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-@Table(name ="medicaments")
 
-public class Medicament {
+public class MedicamentDto {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column(name ="nommedic")
     private String nommedic;
-    @Column(name ="fabriquant")
     private String fabriquant;
-    @Column(name ="dateProduction")
     private LocalDate dateProduction;
-    @Column(name ="dateExpiration")
     private LocalDate dateExpiration;
-    @Column(name ="informations")
     private String informations;
 
-    // All-args constructor (except ID)
-
 }
+
+
